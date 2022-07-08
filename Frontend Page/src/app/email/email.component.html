@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row vh-100 justify-content-around align-items-center">
+      <div class="col">
+        <div class="card-body" style="border: none;">
+          <h1><b>Coming Soon</b></h1>
+          <br>
+          <h3>We're currently working on creating or new web site.</h3>
+          <h3>We'll be launching soon.</h3>
+       
+        <div class="input-group mb-3">
+            <input type="email" class="form-control" [(ngModel)]="email" placeholder="Enter email address..." aria-describedby="button-addon2">
+            <button class="btn btn-primary" type="button" id="button-addon2" (click)="sendEmail()">Notify me!</button>
+            <div class="invalid-feedback">Sorry, that username's taken. Try another?</div>
+            <div class="valid-feedback">Success! You've done it.</div>
+        </div>
+        <div *ngIf="send!=0">
+            <div *ngIf="send==1">
+                <p class="text-success">Thanks! Soon we will communicate with you</p>
+              </div>
+              <div *ngIf="send==2">
+                <p class="text-danger">Oops something went wrong! check your email and try again</p>
+            </div>
+        </div>
+        </div>
+      </div>
+      <div class="col">
+        <img src="../../assets/be_one.png" height="100%" width="100%" style="opacity: 50%;" >
+  
+      </div>
+    </div>
+  </div>
